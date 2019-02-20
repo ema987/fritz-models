@@ -198,7 +198,7 @@ class SmallStyleTransferNetwork(StyleTransferNetwork):
 class IntermediateVGG(object):
     """A VGG network class that allows easy access to intermediate layers.
 
-    This class takes the default VGG16 application packaged with Keras and
+    This class takes the default VGG19 application packaged with Keras and
     constructs a dictionary mapping layer names to layout puts so that
     we can easily extract the network's features at any level. These outputs
     are used to compute losses in artistic style transfer.
@@ -216,7 +216,7 @@ class IntermediateVGG(object):
                           VGG.
         """
         # Create the Keras VGG Model
-        self.model = keras.applications.vgg16.VGG16(
+        self.model = keras.applications.vgg19.VGG19(
             weights='imagenet',
             include_top=False,
             input_tensor=input_tensor

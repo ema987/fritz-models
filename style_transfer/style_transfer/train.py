@@ -7,13 +7,14 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger('train_network')
 
 # The default layers are those suggested by Johnson et al.
-# The names map to those used in the VGG16 application included
+# The names map to those used in the VGG19 application included
 # with Keras.
 _DEFAULT_STYLE_LAYERS = [
-    'block1_conv2', 'block2_conv2',
-    'block3_conv3', 'block4_conv3'
+    'block1_conv1', 'block2_conv1',
+    'block3_conv1', 'block4_conv1',
+    'block5_conv1'
 ]
-_DEFAULT_CONTENT_LAYERS = ['block3_conv3']
+_DEFAULT_CONTENT_LAYERS = ['block5_conv2']
 
 
 if __name__ == '__main__':
